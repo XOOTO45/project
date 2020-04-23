@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Главная страница!</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'styles/indexStyle.css' %}">
+        <script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <div class="mainBlock">
+            <div class='block1'>
+                {% csrf_token %}
+                <input id="refToVideo" type="text" required placeholder="Youtube ссылка">
+                <select style="width: 140px;" id="capacity">
+
+                </select>
+                <p id="title" style="visibility: hidden; margin-top: 0px; margin-bottom: 0px;"></p>
+                <div class='block2'></div>
+                <div class='block3' style="visibility: collapse;">
+                    <p style="display: inline-block;">Скачать: </p>
+                    <select style="width: 140px;" id="selectDownload">
+
+                    </select>
+                </div>
+                <div id="savefrom__yt_btn" class="sf-notify-on-remove-686605"
+                style="display: inline-flex; margin-left: 0px; flex-direction: row; align-items: center; justify-content: center; padding: 0px 0px 0px 0px;"
+                data-sf-video-id="">
+
+                    <a class="sf-quick-dl-btn" style="visibility: collapse; display: inline-block; font-size: inherit; height: 22px; border: 1px solid rgb(0, 183, 90); border-radius: 3px 3px 3px 3px; padding-left: 28px; cursor: pointer; vertical-align: middle; position: relative; line-height: 22px; text-decoration: none; z-index: 1; color: rgb(255, 255, 255);"
+                    title="MP4 360" href="">
+                        <i style="position: absolute; display: inline-block; left: 6px; top: 3px; background-image: url(&quot;data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6Y2M9Imh0dHA6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL25zIyIgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIiB4bWxuczpzdmc9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiB2aWV3Qm94PSIwIDAgMTYgMTYiIGlkPSJzdmcyIiB4bWw6c3BhY2U9InByZXNlcnZlIj48cGF0aCBkPSJNIDQsMCA0LDggMCw4IDgsMTYgMTYsOCAxMiw4IDEyLDAgNCwwIHoiIGZpbGw9IiNmZmZmZmYiIC8+PC9zdmc+&quot;); background-size: 12px; background-repeat: no-repeat; background-position: center center; width: 16px; height: 16px;"></i>
+                        <span class="sf-btn-name" style="padding-right: 12px;">Скачать</span>
+                    </a>
+
+                    <style>
+                        #savefrom__yt_btn{font-family:Roboto, Arial, sans-serif;font-size:13px}
+                        #savefrom__yt_btn button::-moz-focus-inner{padding:0;margin:0}
+                        #savefrom__yt_btn .sf-quick-dl-btn{background-color:#00B75A}
+                        #savefrom__yt_btn .sf-quick-dl-btn:hover{background-color:rgb(0, 163, 80)}
+                        #savefrom__yt_btn .sf-quick-dl-btn:active{background-color:rgb(0, 151, 74)}
+                        @media screen and (max-width: 1293px), screen and (max-height: 768px){#savefrom__yt_btn .sf-quick-dl-btn .sf-btn-name{display:none}}
+                    </style>
+                </div>
+            </div>
+        </div>
+
+        {% load static %}
+        <script src="{% static 'scripts/scriptIndex.js'%}"></script>
+
+        <script src="//savefrom.net/js/sf-helper-agent.min.js"></script>
+    </body>
+</html>
